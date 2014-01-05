@@ -59,7 +59,7 @@ class banco {
 	//}*/ 
 	
         
-        $servidor = "localhost:80";
+        $servidor = "localhost";
         $porta = 5432;
         $bancoDeDados = "postgres";
         $usuario = "root";
