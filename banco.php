@@ -61,9 +61,9 @@ class banco {
         
         $servidor = "localhost";
         $porta = 5432;
-        $bancoDeDados = "postgres";
+        $bancoDeDados = "deposito";
         $usuario = "root";
-        $senha = "123";
+        $senha = "12345678";
 
         $conexao = pg_connect("host=$servidor port=$porta dbname=$bancoDeDados " +"user=$usuario password=$senha");
         if($conexao==NULL) {
