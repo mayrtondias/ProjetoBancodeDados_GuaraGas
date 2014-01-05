@@ -21,9 +21,7 @@
                 </form>
             </div>
         </center>
-        <?php
-
-        ?>
+        
     </body>
     
 </html>
