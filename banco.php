@@ -13,20 +13,39 @@ class banco {
 
     public function conectarBanco() {
 
-	$porta    = "5432";
+	/*$porta    = "5432";
 	$banco    = "guaragas";
 	$usuario  = "postgres";
 	$senha    = "123";
 	
 	$conexao = pg_connect("port=$porta dbname=$banco user=$usuario password=$senha") or die("Nao Conectado");
-	if(!$conexao){
-            echo "verdadeira";
-        }else{
-            echo "falsa";
+	//if($conexao==NULL){
+        //    echo "eroor";
+        //}else{
+        //    echo "existe---".$conexao."<br>";
+        //}
+        
+        $sql="INSERT INTO cliente(nome, contato, rua, bairro, numero) VALUES ('yyyy', '37333', 'kjjgskjdf', 'agsd', 8);";
+        
+        //pg_query($conexao, $sql);
+
+        //echo"passou";
+        
+        $res = pg_exec($conexao, $sql);
+
+        //"$qtd_linhas" recebe a quantidade de Linhas Afetadas pela Inserção
+        $qtd_linhas = pg_affected_rows($res);
+
+        //Se "$qtd_linhas" tiver um Valor maior que 0 o Produto foi gravado com Sucesso na Tabela
+        if ($qtd_linhas > 0)
+        {
+        echo "Produto Cadastrado com Sucesso";
         }
-        
-        
-        
+        //Se "$qtd_linhas" tiver um Valor Igual a 0 é porque ouve um Erro ao gravar o Produto na Tabela
+        elseif ($qtd_linhas == 0)
+        {
+        echo "Não foi possível cadastrar o Produto";
+        }
         
      
 	//$sql = "SELECT coluna1, coluna2 FROM tabela";
@@ -37,27 +56,36 @@ class banco {
 	//for($i=0;
 	//$consulta = @pg_fetch_array($result, $i); $i++) {
 	//print "Coluna1: $consulta[coluna1] - Coluna2: $consulta[coluna2]<br>";
-	//}
-	 
+	//}*/ 
 	
         
-        /*$servidor = "localhost";
+        $servidor = "localhost:80";
         $porta = 5432;
-        $bancoDeDados = "guaragas";
-        $usuario = "postgres";
-        $senha = "123456";
+        $bancoDeDados = "postgres";
+        $usuario = "root";
+        $senha = "123";
 
         $conexao = pg_connect("host=$servidor port=$porta dbname=$bancoDeDados " +"user=$usuario password=$senha");
         if($conexao==NULL) {
             die("Não foi possível se conectar ao banco de dados.");
         }
-         * 
-         */
+         
             
        
         
     }
-
+    
+    public function insere(){
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }
     /*public function inserirPessoa($email, $nome, $cpf, $fone, $senha, $lote) {
 
         $sql_insert = "insert into pessoa (email,nome,cpf,fone,senha,lote) values ('" . $email . "','" . $nome . "','" . $cpf . "','" . $fone . "','" . $senha . "','" . $lote . "')";
