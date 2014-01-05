@@ -20,7 +20,5 @@
             </div>
         </center>    
        
-            <?php
-         ?>
     </body>
 </html>
