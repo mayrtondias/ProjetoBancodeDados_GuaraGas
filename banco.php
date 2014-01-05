@@ -88,12 +88,6 @@ class banco {
         return mysql_query($sql_insert);
     }
 
-    public function inserirFluxo($nome, $descricao, $datal, $datav, $valor, $tipo, $efetuado, $relacao, $email) {
-
-        $sql_insert = "insert into fluxo (nome,descricao,datal,datav,valor,tipo,efetuado,relacao,email) values ('" . $nome . "','" . $descricao . "','" . $datal . "','" . $datav . "','" . $valor . "','" . $tipo . "','" . $efetuado . "','" . $relacao . "','" . $email . "')";
-        return mysql_query($sql_insert);
-    }
-
     public function inserirChat($Id,$sender, $message) {
         $sql_insert = "insert into chat (sender,message,Idtopico) values ('" . $sender . "','" . $message . " ',' " .$Id ."')";
         return mysql_query($sql_insert);
